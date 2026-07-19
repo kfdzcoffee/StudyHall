@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="https://images.kfdzcoffee.cn/i/1/avatar.png">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
+  <style>
+    /* 数学公式容错 */
+    .math { display: inline-block; }
+    /* 档案表格美化 */
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9em;
+    }
+    .markdown-section th {
+      background: #f5f5f5;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px 10px;
+      border: 1px solid #e0e0e0;
+    }
+    .markdown-section td {
+      padding: 6px 10px;
+      border: 1px solid #e0e0e0;
+      vertical-align: top;
+    }
+    .markdown-section td:first-child { text-align: left; }
+    .markdown-section td:not(:first-child) { text-align: center; }
+    /* 高亮提示 */
+    .markdown-section blockquote {
+      border-left: 4px solid #42b983;
+      background: #f8f8f8;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    /* 错题卡片样式 */
+    .markdown-section h3 { margin-top: 24px; }
+    .markdown-section hr { margin: 24px 0; border: none; border-top: 1px solid #eee; }
+    /* 宽屏优化 */
+    @media (min-width: 1200px) {
+      .markdown-section { max-width: 900px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">加载中…</div>
+  <footer style="text-align:center;padding:20px;color:#999;font-size:0.8rem;border-top:1px solid #eee;margin-top:40px;">
+    Copyright &copy; 2026 Kfdzcoffee. All Rights Reserved.
+  </footer>
+  <script>
+    window.$docsify = {
+      name: '📚 错题知识库',
+      nameLink: '/',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      auto2top: true,
+      search: {
+        placeholder: '搜索错题...',
+        noData: '没有找到相关错题',
+        paths: 'auto',
+        depth: 4,
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.afterEach(function(html, next) {
+            // 给表格包裹响应式容器
+            html = html.replace(/<table>/g, '<div class="table-wrapper"><table>');
+            html = html.replace(/<\/table>/g, '</table></div>');
+            next(html);
+          });
+          hook.doneEach(function() {
+            if (window.MathJax) {
+              MathJax.typesetPromise();
+            }
+          });
+        }
+      ]
+    };
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- MathJax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: false,
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
