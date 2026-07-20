@@ -86,13 +86,66 @@
               MathJax.typesetPromise();
             }
           });
-          // 侧边栏：默认折叠所有嵌套子目（如各科"错题记录"下的单题）
-          hook.ready(function() {
-            document.querySelectorAll('.sidebar-nav li li').forEach(function(li) {
-              if (li.querySelector('ul')) {
-                li.classList.add('collapse');
+          // 侧边栏：默认折叠各科"错题记录"下的子题列表
+          function collapseSidebarFolders() {
+            var sidebar = document.querySelector('.sidebar-nav');
+            if (!sidebar) return;
+            var allLis = sidebar.querySelectorAll('li');
+            allLis.forEach(function(li) {
+              var childUl = li.querySelector('ul');
+              if (!childUl) return;
+              // 收集 <li> 的直接文本节点（docsify 把纯文本条目渲染为直接文本节点，非 <p> 标签）
+              var textContent = '';
+              var textNodes = [];
+              var hasStructuredContent = false;
+              for (var i = 0; i < li.childNodes.length; i++) {
+                var node = li.childNodes[i];
+                if (node.nodeType === 3) { // Text node
+                  var t = node.textContent.trim();
+                  if (t) { textContent += t; textNodes.push(node); }
+                } else if (node.nodeType === 1) { // Element node
+                  if (node.tagName === 'UL') break; // 到达子 <ul>，停止
+                  hasStructuredContent = true; // 有其他元素节点，跳过
+                  break;
+                }
               }
+              if (!textContent || hasStructuredContent) return;
+              // 初始折叠
+              childUl.style.display = 'none';
+              // 将文本节点替换为可点击的 span
+              var span = document.createElement('span');
+              span.textContent = '▸ ' + textContent;
+              span.style.cursor = 'pointer';
+              span.style.userSelect = 'none';
+              span.setAttribute('data-folder', 'collapsed');
+              textNodes.forEach(function(n) { li.removeChild(n); });
+              li.insertBefore(span, childUl);
+              span.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (childUl.style.display === 'none') {
+                  childUl.style.display = '';
+                  span.textContent = '▾ ' + textContent;
+                  span.setAttribute('data-folder', 'expanded');
+                } else {
+                  childUl.style.display = 'none';
+                  span.textContent = '▸ ' + textContent;
+                  span.setAttribute('data-folder', 'collapsed');
+                }
+              });
             });
+          }
+          // MutationObserver：等侧边栏渲染完成
+          var sidebarObserver = new MutationObserver(function(mutations, obs) {
+            var sidebar = document.querySelector('.sidebar-nav');
+            if (sidebar && sidebar.querySelectorAll('li').length > 0) {
+              collapseSidebarFolders();
+              obs.disconnect();
+            }
+          });
+          hook.ready(function() {
+            sidebarObserver.observe(document.body, { childList: true, subtree: true });
+            // 兜底：500ms 后无论如何执行一次
+            setTimeout(collapseSidebarFolders, 500);
           });
         }
       ]
