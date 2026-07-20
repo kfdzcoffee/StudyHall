@@ -86,6 +86,14 @@
               MathJax.typesetPromise();
             }
           });
+          // 侧边栏：默认折叠所有嵌套子目（如各科"错题记录"下的单题）
+          hook.ready(function() {
+            document.querySelectorAll('.sidebar-nav li li').forEach(function(li) {
+              if (li.querySelector('ul')) {
+                li.classList.add('collapse');
+              }
+            });
+          });
         }
       ]
     };
