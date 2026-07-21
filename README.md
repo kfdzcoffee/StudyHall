@@ -5,6 +5,21 @@
 
 > 最后更新：2026年7月21日 &nbsp;|&nbsp; 共39题（错题31道 + 作文7篇）&nbsp;|&nbsp; 涵盖语文·数学·英语·地理·历史五科
 
+---
+
+## 🎯 目标院校
+
+> 心之所向，素履以往。每一道错题，都是离梦想更近一步。
+
+| 优先级 | | 院校 | 官网 | 本科招生网 |
+|:---:|:---:|------|:---:|:---:|
+| ⭐1 | ![](images/ruc.png) | **中国人民大学** | [ruc.edu.cn](https://www.ruc.edu.cn) | [本科招生](https://rdzs.ruc.edu.cn) |
+| ⭐2 | ![](images/cupl.png) | **中国政法大学** | [cupl.edu.cn](https://www.cupl.edu.cn) | [本科招生](https://zs.cupl.edu.cn) |
+| ⭐3 | ![](images/cufe.png) | **中央财经大学** | [cufe.edu.cn](https://www.cufe.edu.cn) | [本科招生](https://zs.cufe.edu.cn) |
+| ⭐4 | ![](https://www.cfau.edu.cn/images/logo.png) | **外交学院** | [cfau.edu.cn](https://www.cfau.edu.cn) | [本科招生](https://zs.cfau.edu.cn) |
+
+---
+
 ## 各科概览
 
 | 学科 | 内容 | 错题/作文数 |
