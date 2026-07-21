@@ -262,12 +262,8 @@
             html = html.replace(/<\/table>/g, '</table></div>');
             next(html);
           });
-          hook.doneEach(function() {
-            if (window.MathJax) {
-              MathJax.typesetPromise();
-            }
-          });
           // 侧边栏：默认折叠各科"错题记录"下的子题列表
+          var folderTextCache = {}; // 缓存文本内容，防止路由切换后丢失
           function collapseSidebarFolders() {
             var sidebar = document.querySelector('.sidebar-nav');
             if (!sidebar) return;
@@ -286,47 +282,72 @@
                   if (t) { textContent += t; textNodes.push(node); }
                 } else if (node.nodeType === 1) { // Element node
                   if (node.tagName === 'UL') break; // 到达子 <ul>，停止
-                  hasStructuredContent = true; // 有其他元素节点，跳过
+                  if (node.hasAttribute('data-folder')) {
+                    // 已经处理过（doneEach 重新执行时）
+                    hasStructuredContent = true;
+                    break;
+                  }
+                  hasStructuredContent = true;
                   break;
                 }
               }
               if (!textContent || hasStructuredContent) return;
+
+              // 使用缓存，避免重建时丢失
+              var cached = folderTextCache[textContent.trim()];
+              var shouldBeExpanded = cached && cached.expanded;
+
               // 初始折叠
-              childUl.style.display = 'none';
+              childUl.style.display = shouldBeExpanded ? '' : 'none';
+
               // 将文本节点替换为可点击的 span
               var span = document.createElement('span');
-              span.textContent = '▸ ' + textContent;
+              span.textContent = (shouldBeExpanded ? '▾ ' : '▸ ') + textContent;
               span.style.cursor = 'pointer';
               span.style.userSelect = 'none';
-              span.setAttribute('data-folder', 'collapsed');
+              span.setAttribute('data-folder', shouldBeExpanded ? 'expanded' : 'collapsed');
               textNodes.forEach(function(n) { li.removeChild(n); });
               li.insertBefore(span, childUl);
+
               span.addEventListener('click', function(e) {
                 e.stopPropagation();
+                e.preventDefault();
                 if (childUl.style.display === 'none') {
                   childUl.style.display = '';
                   span.textContent = '▾ ' + textContent;
                   span.setAttribute('data-folder', 'expanded');
+                  folderTextCache[textContent.trim()] = { expanded: true };
                 } else {
                   childUl.style.display = 'none';
                   span.textContent = '▸ ' + textContent;
                   span.setAttribute('data-folder', 'collapsed');
+                  folderTextCache[textContent.trim()] = { expanded: false };
                 }
               });
             });
           }
-          // MutationObserver：等侧边栏渲染完成
-          var sidebarObserver = new MutationObserver(function(mutations, obs) {
-            var sidebar = document.querySelector('.sidebar-nav');
-            if (sidebar && sidebar.querySelectorAll('li').length > 0) {
-              collapseSidebarFolders();
-              obs.disconnect();
+          // doneEach: 每次路由切换后重新应用折叠
+          hook.doneEach(function() {
+            // 先让 MathJax 排版
+            if (window.MathJax) {
+              MathJax.typesetPromise();
             }
+            // 延迟折叠，等 docsify 完成侧边栏 DOM 重建
+            setTimeout(collapseSidebarFolders, 100);
           });
+          // 初始加载时也执行
           hook.ready(function() {
-            sidebarObserver.observe(document.body, { childList: true, subtree: true });
-            // 兜底：500ms 后无论如何执行一次
-            setTimeout(collapseSidebarFolders, 500);
+            // 等初始 DOM 渲染完成后折叠
+            var retryCount = 0;
+            var initTimer = setInterval(function() {
+              var sidebar = document.querySelector('.sidebar-nav');
+              if (sidebar && sidebar.querySelectorAll('li').length > 0) {
+                collapseSidebarFolders();
+                clearInterval(initTimer);
+              } else if (++retryCount > 30) {
+                clearInterval(initTimer);
+              }
+            }, 200);
           });
         }
       ]
