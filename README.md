@@ -1,4 +1,15 @@
 ---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: dc40bd12f59875deed36d07e31348643_8b6921ab876c11f18766525400f8a581
+    ReservedCode1: wAtw6ZC+z+wkFwRrTEtTGnDUXCDNYp6U4/8CaVHnJsO9wQ89W2qlHLKSNq8pMQ7YRW1VqVEtTvOLVFHyZzDjIrP3qk6yZ7YrvFuvG5R31FFgSG0DU0C/TGd2kxomaZKJvqL4Oe+jtpRmfIaoebSuq/l4YsdVLJVrBX1SSsdN08jdlC+FCOsmbyM6tas=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: dc40bd12f59875deed36d07e31348643_8b6921ab876c11f18766525400f8a581
+    ReservedCode2: wAtw6ZC+z+wkFwRrTEtTGnDUXCDNYp6U4/8CaVHnJsO9wQ89W2qlHLKSNq8pMQ7YRW1VqVEtTvOLVFHyZzDjIrP3qk6yZ7YrvFuvG5R31FFgSG0DU0C/TGd2kxomaZKJvqL4Oe+jtpRmfIaoebSuq/l4YsdVLJVrBX1SSsdN08jdlC+FCOsmbyM6tas=
+---
+
+---
 ---
 
 # 学科学情档案汇总
@@ -54,3 +65,4 @@
 | 地理 | [地理档案](地理.md) |
 | 历史 | [历史档案](历史.md) |
 
+*（内容由AI生成，仅供参考）*

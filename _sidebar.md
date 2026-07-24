@@ -1,4 +1,15 @@
 ---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: dc40bd12f59875deed36d07e31348643_8a8a2798876c11f18766525400f8a581
+    ReservedCode1: hze7wAADJg/SWCuyYJ0OyrLfpUDKrnLmooZzOQZ0xii+h9pHpvjTjwSQSZ+hjKEOgAsiXOkk6SCresltjROMKxsyebOqLozimCtjtx9cGpw3hLICprTTfxOJgSk+XushqS+oDDekSA+e8eYKnMjb7xj8IB0mC/a/OElzlVKBrVv1RUVPMJ42hi0IuMw=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: dc40bd12f59875deed36d07e31348643_8a8a2798876c11f18766525400f8a581
+    ReservedCode2: hze7wAADJg/SWCuyYJ0OyrLfpUDKrnLmooZzOQZ0xii+h9pHpvjTjwSQSZ+hjKEOgAsiXOkk6SCresltjROMKxsyebOqLozimCtjtx9cGpw3hLICprTTfxOJgSk+XushqS+oDDekSA+e8eYKnMjb7xj8IB0mC/a/OElzlVKBrVv1RUVPMJ42hi0IuMw=
+---
+
+---
 ---
 
 * [🏠 总览](/)
@@ -29,8 +40,8 @@
     * [错题15: 直线与圆弦长](数学.md#错题-15：直线与圆弦长（海淀高三上期末·第5题）)
     * [错题16: 椭圆点位置判断](数学.md#错题-16：椭圆点位置判断（海淀高三上期末·第7题）)
     * [错题17: 导数极值点充要条件](数学.md#错题-17：导数极值点充要条件（海淀高三上期末·第8题）)
-    * [错题18: 导数含参不等式证明](数学.md#错题-18：导数含参不等式证明-朝阳高三上期末第20(3)题)
-    * [错题19: 三分损益法递推比](数学.md#错题-19：三分损益法递推比-朝阳高三上期末第9题)
+    * [错题18: 导数含参不等式证明](数学.md#错题-18：导数含参不等式证明（朝阳高三上期末·第203题）)
+    * [错题19: 三分损益法递推比](数学.md#错题-19：三分损益法递推比（朝阳高三上期末·第9题）)
 * 英语
   * [作文档案](英语.md#英语档案)
   * 错题记录
@@ -56,4 +67,5 @@
     * [错题9: 元朝农桑辑要的理解](历史.md#错题-9：元朝《农桑辑要》的理解)
     * [错题10: 夏启获君位的多史料解读](历史.md#错题-10：夏启获君位的多史料解读)
     * [错题11: 1948年国统区虚盈实亏的原因](历史.md#错题-11：1948年国统区quot虚盈实亏quot的原因)
+*（内容由AI生成，仅供参考）*
 *（内容由AI生成，仅供参考）*
