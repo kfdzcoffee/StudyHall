@@ -769,10 +769,14 @@
     overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
     document.getElementById('qb-name-cancel').addEventListener('click', function() { overlay.remove(); });
     var wrongAttempts = 0;
-    document.getElementById('qb-name-confirm').addEventListener('click', function() {
+    document.getElementById('qb-name-confirm').addEventListener('click', async function() {
       var pwd = document.getElementById('qb-exam-pwd').value;
       var err = document.getElementById('qb-pwd-err');
-      if (pwd !== 'kfdzcoffee') {
+      var encoder = new TextEncoder();
+      var hashBuffer = await crypto.subtle.digest('SHA-256', encoder.encode(pwd));
+      var hashArray = Array.from(new Uint8Array(hashBuffer));
+      var hashHex = hashArray.map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+      if (hashHex !== 'd9ecc623b0636570bb934cf1b47c3227720bd9cdb2e86984e7bedcd3dcc2d66c') {
         wrongAttempts++;
         if (wrongAttempts >= 2) {
           var limitModal = document.createElement('div');
