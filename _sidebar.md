@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: dc40bd12f59875deed36d07e31348643_ff100e258b5d11f197fe525400826444
+    ReservedCode1: z9Y/cbowJmKS6sqXsDeHg8IzRPk99pKgCuJhlFztqRSQpywKW5Ym8+96gXFoW72fjgU3ntyIir6cx72ABYHQM6UDrOscKIIZHoH9UUfE2HUJShVMtf5S9f9tfk1jmtoZBXOzTSiRu5qy18Yie9XMETcrrvQJQm0Ajk306zADYZ55D6A5AH/MgNpVFWc=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: dc40bd12f59875deed36d07e31348643_ff100e258b5d11f197fe525400826444
+    ReservedCode2: z9Y/cbowJmKS6sqXsDeHg8IzRPk99pKgCuJhlFztqRSQpywKW5Ym8+96gXFoW72fjgU3ntyIir6cx72ABYHQM6UDrOscKIIZHoH9UUfE2HUJShVMtf5S9f9tfk1jmtoZBXOzTSiRu5qy18Yie9XMETcrrvQJQm0Ajk306zADYZ55D6A5AH/MgNpVFWc=
+---
+
 ﻿---
 ---
 
@@ -68,6 +79,9 @@
     * [错题2: 北京普惠健康保辨析](政治.md#错题-2：北京普惠健康保辨析（题号58）)
     * [错题3: 政策措施传导路径](政治.md#错题-3：政策措施传导路径判断（题号59）)
     * [错题4: 并联式发展特征（题号14）](政治.md#错题-4：并联式发展特征（题号14）)
+    * [错题5: 恩格斯三个时代划分与社会发展阶段依据（53政治·第1题）](政治.md#错题-5：恩格斯三个时代划分与社会发展阶段依据（53政治·第1题）)
+    * [错题6: 社会形态更替的必然性与长期性（53政治·第3题）](政治.md#错题-6：社会形态更替的必然性与长期性（53政治·第3题）)
 * 工具箱
   * [分数预测](分数预测.md)
   * [编辑注意事项](编辑注意事项.md)
+*（内容由AI生成，仅供参考）*

@@ -1,10 +1,21 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: dc40bd12f59875deed36d07e31348643_00216bd78b5e11f184f2525400e6dd8f
+    ReservedCode1: 9sQ9vtgG4msrqQkcHz4CJStZRB02m94StrGzQabXnismIyZcR6RzOh5ijuF2Sq7v08FT7HHCkMRIUJHy41AMY4+MJlWBgKPWs8lUwvrrS8xADR1+1Ozs2WA7RBIyZt72suXBWPlxSoq9IZUTpRGN+vCxU5KwZbUACTyA5MRinzsFrqgKerQhYMlkRtw=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: dc40bd12f59875deed36d07e31348643_00216bd78b5e11f184f2525400e6dd8f
+    ReservedCode2: 9sQ9vtgG4msrqQkcHz4CJStZRB02m94StrGzQabXnismIyZcR6RzOh5ijuF2Sq7v08FT7HHCkMRIUJHy41AMY4+MJlWBgKPWs8lUwvrrS8xADR1+1Ozs2WA7RBIyZt72suXBWPlxSoq9IZUTpRGN+vCxU5KwZbUACTyA5MRinzsFrqgKerQhYMlkRtw=
+---
+
 ﻿
 ---
 ---
 
 # 学科学情档案汇总
 
-> 最后更新：2026年7月29日 &nbsp;|&nbsp; 共56题（错题49道 + 作文7篇）&nbsp;|&nbsp; 涵盖语文·数学·英语·地理·历史·政治六科
+> 最后更新：2026年7月29日 &nbsp;|&nbsp; 共58题（错题51道 + 作文7篇）&nbsp;|&nbsp; 涵盖语文·数学·英语·地理·历史·政治六科
 
 ---
 
@@ -57,3 +68,4 @@
 | 历史 | [历史档案](历史.md) |
 | 政治 | [政治档案](政治.md) |
 
+*（内容由AI生成，仅供参考）*
