@@ -1,7 +1,10 @@
-﻿
+﻿﻿
+---
+---
+
 # 学科学情档案汇总
 
-> 最后更新：2026年8月20日 |&nbsp; 共62题（错题57道 + 作文5篇）&nbsp;|&nbsp; 涵盖语文·数学·英语·地理·历史·政治六科
+> 最后更新：2026年8月18日 |&nbsp; 共62题（错题57道 + 作文5篇）&nbsp;|&nbsp; 涵盖语文·数学·英语·地理·历史·政治六科
 
 ---
 
@@ -11,10 +14,12 @@
 
 | 优先级 | | 院校 | 官网 | 本科招生网 |
 |:---:|:---:|------|:---:|:---:|
-| ⭐1 | ![](images/ruc.png) | **中国人民大学** | [官网](https://www.ruc.edu.cn) | [本科招生网](https://rdzs.ruc.edu.cn) |
-| ⭐2 | ![](images/cupl.png) | **中国政法大学** | [官网](https://www.cupl.edu.cn) | [本科招生网](https://zs.cupl.edu.cn) |
-| ⭐3 | ![](images/cufe.png) | **中央财经大学** | [官网](https://www.cufe.edu.cn) | [本科招生网](https://zs.cufe.edu.cn) |
-| ⭐4 | ![](images/51dd2044a1150eae327e1e24322a1867.png) | **外交学院** | [官网](https://www.cfau.edu.cn) | [本科招生网](https://zs.cfau.edu.cn) |
+| ⭐1 | ![](images/ruc.png) | **中国人民大学** | [ruc.edu.cn](https://www.ruc.edu.cn) | [本科招生](https://rdzs.ruc.edu.cn) |
+| ⭐2 | ![](images/cupl.png) | **中国政法大学** | [cupl.edu.cn](https://www.cupl.edu.cn) | [本科招生](https://zs.cupl.edu.cn) |
+| ⭐3 | ![](images/cufe.png) | **中央财经大学** | [cufe.edu.cn](https://www.cufe.edu.cn) | [本科招生](https://zs.cufe.edu.cn) |
+| ⭐4 | ![](https://www.cfau.edu.cn/images/logo.png) | **外交学院** | [cfau.edu.cn](https://www.cfau.edu.cn) | [本科招生](https://zs.cfau.edu.cn) |
+
+---
 
 ## 各科概览
 
@@ -22,8 +27,8 @@
 |:---:|------|:---:|
 | 语文 | — | 错题4道 + 作文4篇 |
 | 数学 | — | 错题26道 |
-| 英语 | — | 错题4道 + 作文1篇 |
-| 地理 | — | 错题5道 |
+| 英语 | — | 错题3道 + 作文1篇 |
+| 地理 | — | 错题6道 |
 | 历史 | — | 错题12道 |
 | 政治 | — | 错题6道 |
 

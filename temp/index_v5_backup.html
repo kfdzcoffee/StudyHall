@@ -246,22 +246,6 @@
     Copyright &copy; 2026 Kfdzcoffee. All Rights Reserved.
   </footer>
   <script>
-    // ===== 加载错题索引：构建 file#n -> 唯一错题编号 的映射 =====
-    // 用于让正文标题锚点 = 唯一错题编号，sidebar 链接指向该编号，杜绝锚点不匹配
-    window.__ERROR_INDEX__ = {};
-    (function () {
-      fetch('错题库/index.json')
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (Array.isArray(data)) {
-            data.forEach(function (e) {
-              if (e && e.file && e.n) window.__ERROR_INDEX__[e.file + '#' + e.n] = e.number;
-            });
-          }
-        })
-        .catch(function () { /* 忽略加载失败 */ });
-    })();
-
     window.$docsify = {
       name: '📚 错题知识库',
       nameLink: '/',
@@ -273,30 +257,6 @@
         noData: '没有找到相关错题',
         paths: 'auto',
         depth: 4,
-      },
-      // ===== 自定义标题锚点：让「错题 N」标题的锚点 = 唯一错题编号（保留大写 E） =====
-      markdown: {
-        renderer: {
-          heading: function (args) {
-            var text = args.text || '';
-            var depth = args.depth;
-            var m = String(text).match(/错题\s*(\d+)/);
-            if (m) {
-              var n = parseInt(m[1], 10);
-              // 从 URL hash 获取当前文件（如 #/数学），补上 .md 后缀
-              var hash = window.location.hash;
-              var fileMatch = hash.match(/#\/([^?]+)/);
-              var file = fileMatch ? decodeURIComponent(fileMatch[1]) : '';
-              if (file && !/\.md$/.test(file)) file += '.md';
-              var number = window.__ERROR_INDEX__ && window.__ERROR_INDEX__[file + '#' + n];
-              if (number) {
-                // 保留大写 E（与软件里的编号一致）
-                return '<h' + depth + ' id="' + number + '">' + text + '</h' + depth + '>';
-              }
-            }
-            return this.origin.heading.apply(this, arguments);
-          }
-        }
       },
       plugins: [
         function(hook, vm) {
@@ -384,24 +344,8 @@
                 });
               }
             }
-            // 修复 sidebar 链接锚点大小写：docsify slugify 会把 E-2026-xxxxxx 转成小写 e-2026-xxxxxx，
-            // 但正文标题 id 是大写 E-2026-xxxxxx。这里把 sidebar 链接的锚点改回大写，使两者匹配。
-            function fixSidebarAnchorCase() {
-              var sidebar = document.querySelector('.sidebar-nav');
-              if (!sidebar) return;
-              var links = sidebar.querySelectorAll('a[href*="?id=e-2026-"]');
-              links.forEach(function(a) {
-                var href = a.getAttribute('href');
-                if (!href) return;
-                var newHref = href.replace(/\?id=e-2026-/, '?id=E-2026-');
-                if (newHref !== href) a.setAttribute('href', newHref);
-              });
-            }
             // 延迟折叠，等 docsify 完成侧边栏 DOM 重建
-            setTimeout(function() {
-              fixSidebarAnchorCase();
-              collapseSidebarFolders();
-            }, 100);
+            setTimeout(collapseSidebarFolders, 100);
           });
           // 初始加载时也执行
           hook.ready(function() {
@@ -445,37 +389,26 @@
 .qb-group-bar {
   max-width: 860px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 12px 32px 0;
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
   font-family: var(--hm-font);
-  background: var(--hm-bg-card);
-  border: 1px solid var(--hm-border);
-  border-radius: var(--hm-radius);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 .qb-group-label {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--hm-text-secondary);
   font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.qb-group-label::before {
-  content: '🗂';
-  font-size: 14px;
 }
 .qb-group-select {
   font-family: var(--hm-font);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--hm-text-primary);
-  background: var(--hm-bg);
+  background: var(--hm-bg-card);
   border: 1px solid var(--hm-border);
   border-radius: var(--hm-radius-sm);
-  padding: 7px 12px;
+  padding: 8px 14px;
   cursor: pointer;
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
