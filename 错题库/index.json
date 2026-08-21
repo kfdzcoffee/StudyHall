@@ -796,5 +796,20 @@
     "linkedPapers": [],
     "createdAt": "",
     "updatedAt": ""
+  },
+  {
+    "number": "E-2026-d8spjy",
+    "type": "三角函数值相等条件（2025西城一模）",
+    "subject": "数学",
+    "file": "数学.md",
+    "n": 27,
+    "familiarity": "vague",
+    "group": "默认",
+    "source": "日常练习",
+    "date": "2026-08-21",
+    "linkedPapers": [],
+    "createdAt": "2026-08-21T12:10:52.622Z",
+    "updatedAt": "2026-08-21T12:10:52.622Z",
+    "version": 1
   }
 ]

@@ -3,6 +3,9 @@
     "id": "default",
     "name": "默认",
     "builtin": true,
-    "createdAt": "2026-08-20T14:59:33.600Z"
+    "createdAt": "2026-08-20T14:59:33.600Z",
+    "updatedAt": "2026-08-20T14:59:33.600Z",
+    "version": 1,
+    "deleted": false
   }
 ]
