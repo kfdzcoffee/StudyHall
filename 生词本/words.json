@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "mt32btqyfyi5m4",
+    "word": "111",
+    "type": "word",
+    "linked": "",
+    "senses": [],
+    "createdAt": "2026-08-21",
+    "reviewStage": 0,
+    "lastReview": "",
+    "nextReview": "2026-08-21",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0,
+    "updatedAt": "2026-08-21T14:54:08.585Z",
+    "version": 5,
+    "deleted": true
+  }
+]
