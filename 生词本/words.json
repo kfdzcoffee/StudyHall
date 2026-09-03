@@ -15,5 +15,85 @@
     "updatedAt": "2026-08-21T14:54:08.585Z",
     "version": 5,
     "deleted": true
+  },
+  {
+    "id": "mt5wfzhnvpyzkl",
+    "word": "leave sth alone",
+    "type": "phrase",
+    "linked": "",
+    "senses": [
+      {
+        "pos": "n.",
+        "meaning": "不碰某物"
+      }
+    ],
+    "createdAt": "2026-08-23",
+    "reviewStage": 0,
+    "lastReview": "",
+    "nextReview": "2026-08-23",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0,
+    "updatedAt": "2026-08-23T14:25:22.283Z",
+    "version": 1
+  },
+  {
+    "id": "mt5wgo3yz2vyqy",
+    "word": "alphabet",
+    "type": "word",
+    "linked": "",
+    "senses": [
+      {
+        "pos": "n.",
+        "meaning": "字母表；入门"
+      }
+    ],
+    "createdAt": "2026-08-23",
+    "reviewStage": 0,
+    "lastReview": "",
+    "nextReview": "2026-08-23",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0,
+    "updatedAt": "2026-08-23T14:25:54.190Z",
+    "version": 1
+  },
+  {
+    "id": "mt5wgu1i5yim06",
+    "word": "alphabet",
+    "type": "word",
+    "linked": "",
+    "senses": [],
+    "createdAt": "2026-08-23",
+    "reviewStage": 0,
+    "lastReview": "",
+    "nextReview": "2026-08-23",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0,
+    "updatedAt": "2026-08-23T14:26:05.506Z",
+    "version": 2,
+    "deleted": true
+  },
+  {
+    "id": "mt5x4ti8hjg296",
+    "word": "alternatively",
+    "type": "word",
+    "linked": "",
+    "senses": [
+      {
+        "pos": "adv.（副词）",
+        "meaning": "二者选一地；或者"
+      }
+    ],
+    "createdAt": "2026-08-23",
+    "reviewStage": 0,
+    "lastReview": "",
+    "nextReview": "2026-08-23",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0,
+    "updatedAt": "2026-08-23T14:45:42.106Z",
+    "version": 3
   }
 ]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mtljn8xr5isd",
+    "name": "2026高三上开学考",
+    "subject": "数学",
+    "date": "2026-09-01",
+    "hasAnswer": true,
+    "paperPaths": [
+      "papers/mtljn8xr5isd/paper-0.jpg",
+      "papers/mtljn8xr5isd/paper-1.jpg",
+      "papers/mtljn8xr5isd/paper-2.jpg",
+      "papers/mtljn8xr5isd/paper-3.jpg",
+      "papers/mtljn8xr5isd/paper-4.jpg",
+      "papers/mtljn8xr5isd/paper-5.jpg"
+    ],
+    "answerPaths": [
+      "papers/mtljn8xr5isd/answer-0.jpg",
+      "papers/mtljn8xr5isd/answer-1.jpg",
+      "papers/mtljn8xr5isd/answer-2.jpg",
+      "papers/mtljn8xr5isd/answer-3.jpg",
+      "papers/mtljn8xr5isd/answer-4.jpg",
+      "papers/mtljn8xr5isd/answer-5.jpg"
+    ],
+    "scoreImagePath": "papers/mtljn8xr5isd/score.png",
+    "score": "",
+    "analysisPath": "papers/mtljn8xr5isd/analysis.md",
+    "linkedErrors": [],
+    "createdAt": "2026-09-03T13:11:24.947Z"
+  }
+]
